@@ -15,17 +15,12 @@
 </div>
 
 
-<script>
+<?php
 
-    $('.btn').click(function(){
+use App\Pank;
 
-        ajax('pank/get', {kasutaja: $('#kasutaja').val()}, function(r){
+if (isset($_POST['submit'])) {
 
-            var vastus = JSON.stringify(r, null, 2);
-            $('.info').html(vastus);
+    $kasutaja = Pank::get();
 
-        });
-
-    });
-
-</script>
+}

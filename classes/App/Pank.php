@@ -10,7 +10,7 @@ class Pank
     public static function get($kasutaja) {
 
         if (self::get_local($kasutaja) == false) {
-            echo "Sellist kasutajat ei ole";
+            return "Sellist kasutajat ei ole";
             exit();
         }
         else {

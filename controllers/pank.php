@@ -13,16 +13,6 @@ class pank extends Controller
 
         $kasutaja = $_POST['kasutaja'];
 
-/*
-        try {
-            $kasutaja_andmed = Pank::get($kasutaja);
-        }
-        catch (\Exception $e) {
-            stop(500, $e->getMessage());
-        }
-
-        stop(200, $filmi_andmed);
-*/
 
     }
 }

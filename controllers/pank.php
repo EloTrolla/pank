@@ -31,6 +31,5 @@ class pank extends Controller
 
         stop(200, $kasutaja_andmed);
 
-
     }
 }

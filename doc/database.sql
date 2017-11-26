@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.6.25, for osx10.6 (x86_64)
+ -- MySQL dump 10.13  Distrib 5.6.25, for osx10.6 (x86_64)
 --
 -- Host: 127.0.0.1    Database: halo
 -- ------------------------------------------------------

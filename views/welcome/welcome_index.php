@@ -1,7 +1,7 @@
 <div class="form-group">
     <label for="kasutaja" class="col-sm-2 control-label">Kasutaja</label>
     <div class="col-sm-10">
-        <input type="text" class="form-control" id="filmi-nimi" placeholder="Kasutaja">
+        <input type="text" class="form-control" id="kasutaja" placeholder="Kasutaja">
     </div>
 </div>
 
@@ -15,12 +15,20 @@
 </div>
 
 
-<?php
+<script>
 
-use App\Pank;
+    // kasutaja1
+    // kasutaja2
 
-if (isset($_POST['submit'])) {
+    $('.btn').click(function(){
 
-    $kasutaja = Pank::get();
+        ajax('pank/get', {kasutaja: $('#kasutaja').val()}, function(r){
 
-}
+            var vastus = JSON.stringify(r, null, 2);
+            $('.info').html(vastus);
+
+        });
+
+    });
+
+</script>

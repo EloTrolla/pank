@@ -1,12 +1,13 @@
 <div class="form-group">
-    <label for="kasutaja" class="col-sm-2 control-label">Kasutaja</label>
-    <div class="col-sm-10">
+    <label for="kasutaja" class="control-label">Kasutaja</label>
+    <p>(kasutaja1, kasutaja2)</p>
+    <div class="">
         <input type="text" class="form-control" id="kasutaja" placeholder="Kasutaja">
     </div>
 </div>
 
 <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
+    <div class="">
         <button type="submit" class="btn btn-default">Saada</button>
     </div>
 </div>

@@ -14,12 +14,14 @@ class Pank1
         $kasutajanimi = addslashes($kasutaja);
 
         $kasutaja_andmed = get_first("SELECT * FROM konto WHERE kasutaja = '$kasutajanimi'");
-        
+
         return $kasutaja_andmed;
 
     }
 
     public static function send($kasutaja_andmed) {
+
+
 
         $string = http_build_query($kasutaja_andmed);
 
@@ -27,17 +29,14 @@ class Pank1
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $string);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        //curl_exec($ch);
 
         $output=curl_exec($ch);
 
-        if($output === false)
-        {
-            echo "Error Number:".curl_errno($ch)."<br>";
-            echo "Error String:".curl_error($ch);
-        }
-        curl_close($ch);
-        return $output;
+        if ($output === false) {
 
+            stop(curl_error($ch));
+        }
+
+        curl_close($ch);
     }
 }
